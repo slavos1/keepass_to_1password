@@ -1,0 +1,23 @@
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "keepass_to_1password"
+version = "0.1.0"
+description = "Convert KeePass XML export to 1Password-compatible CSV format"
+authors = ["slavos1 <slavos1@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+lxml = "^4.3"
+twiggy = "^0.4.7"
+click = "^7.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.1"
+
+[tool.poetry.scripts]
+cli = "keepass_to_1password.cli:cli"
+
